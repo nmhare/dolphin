@@ -18,6 +18,7 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Svg)
 
 if (Qt6_VERSION VERSION_GREATER_EQUAL 6.10.0)
   # GuiPrivate is needed to #include qplatformnativeinterface.h in MainWindow.cpp with Qt 6.10+.
+  set(QT_NO_PRIVATE_MODULE_WARNING ON)
   set(NEED_QT_GUI_PRIVATE_COMPONENT ON)
   find_package(Qt6 REQUIRED COMPONENTS GuiPrivate)
 endif()

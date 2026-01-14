@@ -8,7 +8,7 @@
 
 namespace Common
 {
-std::optional<std::tm> Localtime(std::time_t time)
+std::optional<std::tm> LocalTime(std::time_t time)
 {
   std::tm local_time;
 #ifdef _MSC_VER
